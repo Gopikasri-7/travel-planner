@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner App</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>Plan Your Dream Trip!</h1>
+        <p>Explore destinations, view packages, and book your adventure.</p>
+    </header>
+
+    <div class="container">
+        <div class="filters">
+            <input type="text" id="searchInput" placeholder="Search by destination..." />
+            <select id="typeFilter">
+                <option value="All">All Types</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Leisure">Leisure</option>
+                <option value="Cultural">Cultural</option>
+            </select>
+            <select id="sortFilter">
+                <option value="default">Sort by Price</option>
+                <option value="priceAsc">Low to High</option>
+                <option value="priceDesc">High to Low</option>
+            </select>
+        </div>
+
+        <div id="packagesContainer" class="packages-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

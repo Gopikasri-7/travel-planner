@@ -1,0 +1,127 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+}
+
+.hero {
+    background: linear-gradient(135deg, #1E90FF, #00CED1);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.2rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.filters input, .filters select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    flex: 1;
+    min-width: 180px;
+}
+
+.packages-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.package-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.package-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.2);
+}
+.package-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+.package-card h3 {
+    margin: 12px 0 5px 0;
+    font-family: 'Poppins', sans-serif;
+}
+.package-card p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+.package-card .price {
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+.package-card .price span {
+    text-decoration: line-through;
+    color: red;
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+.package-card .badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.badge.Adventure { background-color: #28a745; } 
+.badge.Leisure { background-color: #007bff; }   
+.badge.Cultural { background-color: #fd7e14; }  
+
+.package-card .rating {
+    color: #FFD700; 
+    margin: 5px 0;
+}
+
+.package-card button {
+    padding: 10px 20px;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #1E90FF, #00CED1);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+.package-card button:hover {
+    background: linear-gradient(135deg, #00CED1, #1E90FF);
+}
+
+@media (max-width: 600px) {
+    .filters {
+        flex-direction: column;
+    }
+}
